@@ -2,7 +2,7 @@
 #1. DB 접속하기
 include_once('dbconn.php');
 #2. 입력 폼 데이터 읽어오기
-$username = $_POST['username'];
+$userid = $_POST['userid'];
 $pwd = $_POST['pwd'];
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -13,7 +13,7 @@ $ADDRESS_DETAIL = $_POST['ADDRESS_DETAIL'];
 $ADDRESS_SUBDETAIL = $_POST['ADDRESS_SUBDETAIL'];
 
 #3. INSERT SQL 구문 작성하기
-$sql = "insert into user values('$username','$pwd','$name', '$email', $phone, '$ADDRESS_ZIPCODE',
+$sql = "insert into user values('$userid','$pwd','$name', '$email', $phone, '$ADDRESS_ZIPCODE',
                                 '$ADDRESS_ROAD', '$ADDRESS_DETAIL', '$ADDRESS_SUBDETAIL')";
 #4. SQL 실행하기
 if($conn->query($sql)) 
