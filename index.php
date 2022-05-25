@@ -69,7 +69,37 @@
 
 
 	/* 추가한것 */
+	.topnav {
+		background-color: transparent;
+		overflow: hidden;
+	}
+
 	/* Style the links inside the navigation bar */
+	.topnav a {
+		float: right;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 8px;
+		text-decoration: none;
+		font-size: 14px;
+	}
+
+	/* Change the color of links on hover */
+	.topnav a:hover {
+		background-color: #ddd;
+		color: black;
+	}
+
+	/* Add a color to the active/current link */
+	.topnav a.active {
+		background-color: #4CAF50;
+		color: white;
+	}
+
+	/* Right-aligned section inside the top navigation */
+	.topnav-right {
+		float: right;
+	}    
 
 </style>
 </head>
@@ -84,6 +114,7 @@
 		//echo "$uid : $uname<br>";
 		$logged = true;
 	}
+	/*
 	#1. Database connection
 	include_once('dbconn.php');
 	// 장바구니 검색
@@ -92,25 +123,8 @@
 	$result = $conn->query($sql);
 	//$row = $result->fetch_array(MYSQLI_NUM);
 	$row = $result->fetch_assoc();
-	}
+	}*/
 ?>
-<div class="topnav">
-<?php
-	if(!$logged) {
-		echo "<a href='signup.html'>회원가입</a>";
-		echo "<a href='signin.html'>로그인</a>";
-	}
-	else {
-		echo "<a href=''>{$name}님 환영합니다.</a>";
-		echo "<a href='signout.php'>로그아웃</a>";
-		echo "<a href='signmodify.php'>회원정보수정</a>";
-		echo "<a href='signdel.php'>회원탈퇴</a>";
-		echo "<a href='showcart.php'>장바구니(".$row['rowcnt'].")</a>";
-		echo "<a href='showorder.php'>주문내역</a>";
-		echo "<a href='writeboard.php'>글작성</a>";
-	}
-?>
-</div>
 
 <!-- navbar -->
 <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -130,9 +144,28 @@
                 <li><a href="#gallery">GALLERY</a></li>
                 <li><a href="#post">POST</a></li>
             </ul>
+			<!-- 잠시 가림
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
+            </ul> -->
+			<!-- 로그인 시 변환 -->
+			<div class="topnav">
+			<?php
+				if(!$logged) {
+					echo "<a href='signin.html'>로그인</a>";
+				}
+				else {
+					echo "<a href='signmodify.php'>회원정보수정</a>";
+					echo "<a href='signdel.php'>회원탈퇴</a>";
+					echo "<a href='signout.php'>로그아웃</a>";
+					echo "<a href=''>{$uname}님 환영합니다.</a>";
+					/*
+					echo "<a href='showcart.php'>장바구니(".$row['rowcnt'].")</a>";
+					echo "<a href='showorder.php'>주문내역</a>";
+					echo "<a href='writeboard.php'>글작성</a>";*/
+				}
+			?>
+			</div>
         </div>
     </div>
 </nav>
