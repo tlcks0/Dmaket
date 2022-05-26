@@ -109,9 +109,8 @@
 	session_start();
 	$logged = false;
 	if(isset($_SESSION['userid'])) {  // 세션에 uid 키가 정의되어 있으면 
-		$uid = $_SESSION['userid'];
-		$uname = $_SESSION['name'];
-		//echo "$uid : $uname<br>";
+		$userid = $_SESSION['userid'];
+		$name = $_SESSION['name'];
 		$logged = true;
 	}
 	/*
@@ -135,14 +134,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">I love Europe</a>
+            <a class="navbar-brand">I love Shopping</a>
         </div>
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="#post">POST</a></li>
+                <li><a href="#" onclick="scrollToSection('#')">HOME</a></li>
+                <li><a href="#about" onclick="scrollToSection('#about')">ABOUT</a></li>
+                <li><a href="#gallery" onclick="scrollToSection('#gallery')">GALLERY</a></li>
+                <li><a href="#post" onclick="scrollToSection('#post')">POST</a></li>
             </ul>
 			<!-- 잠시 가림
             <ul class="nav navbar-nav navbar-right">
@@ -155,14 +154,15 @@
 					echo "<a href='signin.html'>로그인</a>";
 				}
 				else {
+                    echo "<a href='writeboard.php'>고객센터</a>";
 					echo "<a href='signmodify.php'>회원정보수정</a>";
 					echo "<a href='signdel.php'>회원탈퇴</a>";
 					echo "<a href='signout.php'>로그아웃</a>";
-					echo "<a href=''>{$uname}님 환영합니다.</a>";
+					echo "<a href=''>{$name}님 환영합니다.</a>";
 					/*
 					echo "<a href='showcart.php'>장바구니(".$row['rowcnt'].")</a>";
-					echo "<a href='showorder.php'>주문내역</a>";
-					echo "<a href='writeboard.php'>글작성</a>";*/
+					echo "<a href='showorder.php'>주문내역</a>";*/
+					
 				}
 			?>
 			</div>
@@ -386,6 +386,11 @@ $(document).ready(function(){
     }  // End if
   });
 });
+// 화면을 부드럽게 스크롤링하기
+function scrollToSection(loc) {
+    var offset = $(loc).offset();
+    $('html, body').animate({scrollTop: offset.top}, 500);
+}
 </script>
 
 </body>
