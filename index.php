@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>유럽 즐기기</title>
+  <title>Dmaket</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
@@ -135,7 +135,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">I love Europe</a>
+            <a class="navbar-brand">Dmaket</a>
         </div>
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav">
