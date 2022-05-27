@@ -10,27 +10,27 @@
         body {
                 text-align: center;
             }
-            #pizza {
+            #dmaket {
                 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
                 border-collapse: collapse;
                 width: 70%;
                 margin-left: auto;
                 margin-right: auto;
             }
-            #pizza td, #pizza th {
+            #dmaket td, #dmaket th {
                 border: 1px solid #ddd;
                 padding: 8px;
             }
-            #pizza tr:nth-child(even){background-color: #f2f2f2;}
-            #pizza tr:hover {background-color: #ddd;}
-            #pizza th {
+            #dmaket tr:nth-child(even){background-color: #f2f2f2;}
+            #dmaket tr:hover {background-color: #ddd;}
+            #dmaket th {
                 padding-top: 12px;
                 padding-bottom: 12px;
                 text-align: center;
                 background-color: orange;
                 color: white;
             }
-        #pizza img {
+        #dmaket img {
             width: 120px;
             height: 80px;
         }
@@ -157,7 +157,7 @@
         if($result->num_rows > 0) {
     ?>
 		<hr>
-        <table id='pizza'>
+        <table id='dmaket'>
         <tr>
             <th>번호</th>
             <th>작성자</th>
