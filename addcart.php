@@ -47,7 +47,7 @@
     }
     /* Set a style for the submit button */
     .btn {
-        background-color: #4CAF50;
+        background-color: #007bff;
         color: white;
         padding: 16px 20px;
         border: none;
@@ -80,10 +80,19 @@
         <form action="addcartproc.php" method="post">
             <div class="row">
                 <div class="col-25">
-                    <label for="fname">상품</label>
+                    <label for="fname">물품</label>
                 </div>
                 <div class="col-75">
                     <input type="text" name="selllist" value="<?=$selllist?>">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">가격</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" name="size" value="price" checked> 가격(<?=$price?>)
+                    <input type="text" name="price" value="<?=$price?>" hidden>
                 </div>
             </div>
             <div class="row">
@@ -95,7 +104,7 @@
                 </div>
             </div>
             <div class="row">
-                <input type="submit" value="Submit" class="btn">
+                <input type="submit" value="담기" class="btn">
             </div>
         </form>
     </div>

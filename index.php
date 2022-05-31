@@ -7,7 +7,6 @@
   <link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
     @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -286,7 +285,7 @@
             <span class="label label-warning" style="margin-left: 10px">34,900원</span>
           </li>
       </ul>
-      <button type="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#dialog">구매하기
+      <button type="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#dialog">자세히
       </button>
       
 <!-- Modal -->
@@ -347,7 +346,7 @@
 	<?php
 	while($row = $result->fetch_array(MYSQLI_NUM)) {
 	?>
-	<div class="a col-sm-4" style="width: 100%">
+	<div class="col-sm-4" style="width: 100%">
 		<a href="addcart.php?selllist=<?=$row[1]?>&price=<?=$row[2]?>">
 			<img src="images2/<?=$row[3]?>"></a>
 		<div class="">
@@ -403,7 +402,7 @@
 
 <footer class="text-center border-top border-secondary" style="margin-top:100px">
 	대진대학교 휴먼IT공과대학 컴퓨터공학전공
-	<p style="font-size:5px;">경기도 포천시 호국로 1007(선단동)</p>
+	<p style="font-size:5px;">경기도 포천시 호국로 1007(선단동) 20192316 김시찬</p>
 </footer>
 
 <script>

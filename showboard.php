@@ -27,7 +27,7 @@
                 padding-top: 12px;
                 padding-bottom: 12px;
                 text-align: center;
-                background-color: orange;
+                background-color: #007bff;
                 color: white;
             }
         #dmaket img {
