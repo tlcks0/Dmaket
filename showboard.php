@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="board.css">
     <style>
         body {
-                text-align: center;
-            }
-            #dmaket {
-                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 70%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #dmaket td, #dmaket th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-            #dmaket tr:nth-child(even){background-color: #f2f2f2;}
-            #dmaket tr:hover {background-color: #ddd;}
-            #dmaket th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: center;
-                background-color: #007bff;
-                color: white;
-            }
+            text-align: center;
+        }
+        #dmaket {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #dmaket td, #dmaket th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #dmaket tr:nth-child(even){background-color: #f2f2f2;}
+        #dmaket tr:hover {background-color: #ddd;}
+        #dmaket th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+        }
         #dmaket img {
             width: 120px;
             height: 80px;
@@ -47,75 +47,78 @@
         .btn:hover {
             opacity: 1;
         }
-            /* Style Page */
-            .paging_area { 
-                width: 100%;
-                height: 50px;
-                padding-top: 7px;
-                margin-left: auto;
-            }
-            .paging_area a, .paging_area span {
-                /*
-                color: black;
-                display: inline-block;
-                padding: 8px 16px;
-                text-decoration: none;
-                transition: background-color .3s;*/
-                display: inline-block;
-                border-radius: 3px;
-                border: solid 1px #c0c0c0;
-                background: #e9e9e9;
-                box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
-                padding: 3px 9px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #717171;
-                text-shadow: 0px 1px 0px rgba(255,255,255, 1);
-            }
-            .paging_area a.active {
-                background-color: dodgerblue;
-                color: white;
-            }
-            .paging_area a:hover:not(.active) {background-color: #fefefe;}
-            /* Search */
-            .topnav .search-container {
-              float: right;
-            }
-            .topnav input[type=text] {
-              padding: 6px;
-              margin-top: 8px;
-              font-size: 17px;
-              border: 3px solid #ddd;
-                margin-right: 6px; 
-                margin-bottom: 10px;
-            }
-            .topnav .search-container button {
-              float: right;
-              padding: 6px 10px;
-              margin-top: 8px;
-              margin-right: 16px;
-              background: #ddd;
-              font-size: 17px;
-              border: none;
-              cursor: pointer;
-            }
-            .topnav .search-container button:hover {
-              background: #ccc;
-            }
-            button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                float: right;
-                margin-top: 5px;
-                margin-left: 5px;
-            }
-            button:hover {
-                background-color: #45a049;
-            }
+        /* Style Page */
+        .paging_area { 
+            width: 100%;
+            height: 50px;
+            padding-top: 7px;
+            margin-left: auto;
+        }
+        .paging_area a, .paging_area span {
+            /*
+            color: black;
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;*/
+            display: inline-block;
+            border-radius: 3px;
+            border: solid 1px #c0c0c0;
+            background: #e9e9e9;
+            box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+            padding: 3px 9px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #717171;
+            text-shadow: 0px 1px 0px rgba(255,255,255, 1);
+        }
+        .paging_area a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+        .paging_area a:hover:not(.active) {background-color: #fefefe;}
+        /* Search */
+        .topnav .search-container {
+            float: right;
+        }
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: 3px solid #ddd;
+            margin-right: 6px; 
+            margin-bottom: 10px;
+        }
+        .topnav .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+        margin-top: 70px;
+        }   
     </style>
 </head>
 <body>

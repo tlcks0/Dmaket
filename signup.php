@@ -17,6 +17,6 @@ $sql = "insert into user values('$userid','$pwd','$name', '$email', $phone, '$AD
                                 '$ADDRESS_ROAD', '$ADDRESS_DETAIL', '$ADDRESS_SUBDETAIL')";
 #4. SQL 실행하기
 if($conn->query($sql)) 
-    echo "회원가입 성공!! <a href='index.php'>Dmaket</a>";
+    echo "<script>alert('회원가입 성공!!'); location.href='index.php'; </script>";
 else echo "회원가입 중에 오류가 발생했습니다.";
 ?>

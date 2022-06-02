@@ -6,22 +6,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="board.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-
+    <style>
+      #tab, #newboard {
+        margin-top: 50px;
+      }
+    </style>
     <body>
+      <!-- navbar -->
+      <nav class="navbar navbar-fixed-top navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menu">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand">Dmaket</a>
+              </div>
+              <div class="collapse navbar-collapse" id="menu">
+                  <ul class="nav navbar-nav">
+                      <li><a href="index.php">HOME</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
         <?php
         if(isset($_SESSION['userid'])) {
-            $userid = $_SESSION['userid'];
-			$name = $_SESSION['name'];
-		}
+          $userid = $_SESSION['userid'];
+          $name = $_SESSION['name'];
+		    }
         else // 로그인상태가 아니면
-            header("location: signin.html"); // 로그인페이지로 이동하기
+          header("location: signin.html"); // 로그인페이지로 이동하기
         $wdate = date('Y/m/d');
         ?>
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'newboard')" id="defaultOpen">문의작성</button>
-            <button class="tablinks" onclick="openTab(event, 'showboard')">문의목록</button>
+        <div class="tab" id="tab">
+          <button class="tablinks" onclick="openTab(event, 'newboard')" id="defaultOpen">문의작성</button>
+          <button class="tablinks" onclick="openTab(event, 'showboard')">문의목록</button>
         </div>
         
         <div id="newboard" class="tabcontent">

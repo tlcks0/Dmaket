@@ -13,9 +13,21 @@ $sql = "select * from user
 $result = $conn->query($sql); // 검색되면 레코드 한 건이 $result에 저장됨.
 if(isset($result) && $result->num_rows > 0) {
     $row = $result->fetch_assoc();  // 검색된 레코드 하나를 연관배열 형태로 받아옴.
+    // 쿠키 확인
+    if(isset($_COOKIE['user'])) {
+        $name = $_COOKIE['user'];
+        $date = $_COOKIE['logdate'];
+        echo "<script>alert('$name 님 반갑습니다. 마지막 방문일자 : $date')</script>";
+    }
+
     // 세션 데이터 생성
-   $_SESSION['userid'] = $userid;  // user id 값을 세션 키 uid에 저장.
-    $_SESSION['name'] = $row['name']; // 앞에있는건 세션키 뒤에껀 컬럼명(uname)
+   $_SESSION['userid'] = $userid;  // userid 값을 세션 키 userid에 저장.
+    $_SESSION['name'] = $row['name']; // 앞에있는건 세션키 뒤에껀 컬럼명(name)
+
+    // cookie 설정
+    setcookie("user", $row['name'], time() + (86400 * 10), "/"); // 86400 = 1 day
+    setcookie("logdate", date('Y/m/d'), time() + (86400 * 10), "/"); // 86400 = 1 day
+
     echo "<script>location.href='index.php'</script>";
 }
 else

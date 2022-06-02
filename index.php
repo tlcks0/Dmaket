@@ -10,6 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
     @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
     body {
       font-family: 'Noto Sans KR', sans-serif;
     }
@@ -52,7 +53,7 @@
         color: #777;
     }
 
-    #home, #about, #shopping {
+    #home, #best, #shopping {
       margin-top: 60px;
     }
     /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -67,39 +68,40 @@
       padding: 25px;
     }
 
+    /* 드롭다운 */
+    .dropdown {
+    display: inline-block;
+    }
+    .dropbtn {
+    background-color: transparent;
+    color: #9D9D9D;
+    margin-right: 25px;
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    }
 
-	/* 추가한것 */
-	.topnav {
-		background-color: transparent;
-		overflow: hidden;
-	}
+    .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
 
-	/* Style the links inside the navigation bar */
-	.topnav a {
-		float: right;
-		color: #f2f2f2;
-		text-align: center;
-		padding: 8px;
-		text-decoration: none;
-		font-size: 14px;
-	}
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
 
-	/* Change the color of links on hover */
-	.topnav a:hover {
-		background-color: #ddd;
-		color: black;
-	}
+    .dropdown-content a:hover {background-color: #f1f1f1}
 
-	/* Add a color to the active/current link */
-	.topnav a.active {
-		background-color: #4CAF50;
-		color: white;
-	}
-
-	/* Right-aligned section inside the top navigation */
-	.topnav-right {
-		float: right;
-	}    
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
 </style>
 </head>
 <body>
@@ -122,7 +124,24 @@
 	$row = $result->fetch_assoc();
 	}
 ?>
-
+<?php
+    session_start();
+    $logged = false;
+    if(isset($_SESSION['userid'])) {  // 세션에 uid 키가 정의되어 있으면 
+        $userid = $_SESSION['userid'];
+        $name = $_SESSION['name'];
+        $logged = true;
+    }
+    #1. Database connection
+    include_once('dbconn.php');
+    // 장바구니 검색
+    if($logged) {
+    $sql = "select count(*) rowcnt from cart where userid = '$userid'";
+    $result = $conn->query($sql);
+    //$row = $result->fetch_array(MYSQLI_NUM);
+    $row = $result->fetch_assoc();
+    }
+?>
 <!-- navbar -->
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
@@ -136,46 +155,32 @@
         </div>
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav">
-                <li><a href="#" onclick="scrollToSection('#')">HOME</a></li>
-                <li><a href="#about" onclick="scrollToSection('#about')">ABOUT</a></li>
-                <li><a href="#shopping" onclick="scrollToSection('#shopping')">SHOPPING</a></li>
-                <li><a href="#post" onclick="scrollToSection('#post')">POST</a></li>
+                <li><a href="#" onclick="scrollToSection('#')"><i class="bi bi-house-door"></i>HOME</a></li>
+                <li><a href="#best" onclick="scrollToSection('#best')"><i class="bi bi-award"></i>BEST</a></li>
+                <li><a href="#shopping" onclick="scrollToSection('#shopping')"><i class="bi bi-cart4"></i>SHOPPING</a></li>
+                <li><a href="#post" onclick="scrollToSection('#post')"><i class="bi bi-postcard"></i>POST</a></li>
             </ul>
-            <?php
-			session_start();
-			$logged = false;
-			if(isset($_SESSION['userid'])) {  // 세션에 uid 키가 정의되어 있으면 
-				$userid = $_SESSION['userid'];
-				$name = $_SESSION['name'];
-				$logged = true;
-			}
-			#1. Database connection
-			include_once('dbconn.php');
-			// 장바구니 검색
-			if($logged) {
-			$sql = "select count(*) rowcnt from cart where userid = '$userid'";
-			$result = $conn->query($sql);
-			//$row = $result->fetch_array(MYSQLI_NUM);
-			$row = $result->fetch_assoc();
-			}
-		    ?>
-			<div class="topnav">
 			<?php
 				if(!$logged) {
-					echo "<a class'w3-bar-item w3-button w3-padding-large' href='signin.html'>로그인</a>";
+					echo "<ul class='nav navbar-nav navbar-right'><li><a href='signin.html'><span class='glyphicon glyphicon-log-in'></span>&nbsp;&nbsp;로그인</a></ul>";
 				}
 				else {
-                    echo "<a href='writeboard.php'>고객센터</a>";
-					echo "<a href='signmodify.php'>회원정보수정</a>";
-					echo "<a href='signdel.php'>회원탈퇴</a>";
-					echo "<a href='signout.php'>로그아웃</a>";
-					echo "<a href=''>{$name}님 환영합니다.</a>";
-					echo "<a href='showcart.php'>장바구니(".$row['rowcnt'].")</a>";
-					echo "<a href='showorder.php'>주문내역</a>";
-					
+                    echo "<ul class='nav navbar-nav navbar-right'><li><a href=''>{$name}님 환영합니다.</a></li>
+                            <li><a href='signout.php'>로그아웃</a></li>
+                            <li><a href='writeboard.php'>고객센터</a></li>";
+
+                    echo "<div class='nav navbar-nav navbar-right dropdown'>
+                            <button class='dropbtn'>내 정보</button>
+                            <div class='dropdown-content'>
+                            <a href='showcart.php'>장바구니(".$row['rowcnt'].")</a>
+                            <a href='showorder.php'>주문내역</a>
+                            <a href='signmodify.php'>회원정보수정</a>
+                            <a href='signdel.php'>회원탈퇴</a>
+                        </div></ul>";
 				}
 			?>
-			</div>
+            
+			
         </div>
     </div>
 </nav>
@@ -230,8 +235,8 @@
     </a>
 </div>
 
-<!-- Main Content -->
-<div class="container text-center" id="about">
+<!-- 핫딜 -->
+<div class="container text-center" id="best">
     <h1>롯데칠성 제로탄산 BIG3</h1>
     <h4>칼로리 걱정없이 즐기는 탄산음료</h4>
     <p>음료</p>
@@ -346,6 +351,7 @@
 	<?php
 	while($row = $result->fetch_array(MYSQLI_NUM)) {
 	?>
+    <div class="row">
 	<div class="col-sm-4" style="width: 100%">
 		<a href="addcart.php?selllist=<?=$row[1]?>&price=<?=$row[2]?>">
 			<img src="images2/<?=$row[3]?>"></a>
@@ -400,9 +406,10 @@
 </div>
 </div>
 
+<!--footer-->
 <footer class="text-center border-top border-secondary" style="margin-top:100px">
 	대진대학교 휴먼IT공과대학 컴퓨터공학전공
-	<p style="font-size:5px;">경기도 포천시 호국로 1007(선단동) 20192316 김시찬</p>
+	<p style="font-size:5px;">경기도 포천시 호국로 1007(선단동) &copy; 20192316 김시찬</p>
 </footer>
 
 <script>

@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-                text-align: center;
-            }
-            #dmaket {
-                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 70%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #dmaket td, #dmaket th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-            #dmaket tr:nth-child(even){background-color: #f2f2f2;}
-            #dmaket tr:hover {background-color: #ddd;}
-            #dmaket th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: center;
-                background-color: #4CAF50;
-                color: white;
-            }
+            text-align: center;
+        }
+        #dmaket {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #dmaket td, #dmaket th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #dmaket tr:nth-child(even){background-color: #f2f2f2;}
+        #dmaket tr:hover {background-color: #ddd;}
+        #dmaket th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+        }
         #dmaket img {
             width: 120px;
             height: 80px;
@@ -44,6 +44,9 @@
         }
         .btn:hover {
             opacity: 1;
+        }
+        h1 {
+        margin-top: 70px;
         }
     </style>
 </head>

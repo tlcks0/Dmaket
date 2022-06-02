@@ -7,7 +7,7 @@ include_once('dbconn.php');
 $userid = $_SESSION['userid'];
 $sql = "delete from user where userid = '$userid'";
 if($conn->query($sql)) {
-    echo "회원탈퇴 성공!! <a href='index.php'>Dmaket</a>";
+    echo "<script>alert('회원탈퇴 성공!!'); location.href='index.php'; </script>";
     session_destroy();  // 세션정보 삭제
 }
 else 

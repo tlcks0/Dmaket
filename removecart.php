@@ -15,7 +15,7 @@ foreach($items as $item) {
 //    echo "$str<br>";
     $size = substr($item, $pos+1, 1);
 //    echo "$size<br>";
-    $sql = "delete from cart where userid = '$userid' and sellname = '$name'"; 
+    $sql = "delete from cart where userid = '$userid' and sellname = '$sellname'"; 
 #4.SQL 실행
     if(!$conn->query($sql))
         die('삭제 중에 오류가 발생했습니다. '.$conn->error);

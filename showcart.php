@@ -4,37 +4,38 @@
     <title>Dmaket</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         body {
-                text-align: center;
-            }
-            #Dmaket {
-                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 70%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #Dmaket td, #Dmaket th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-            #Dmaket tr:nth-child(even){background-color: #f2f2f2;}
-            #Dmaket tr:hover {background-color: #ddd;}
-            #Dmaket th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: center;
-                background-color: #4CAF50;
-                color: white;
-            }
+            text-align: center;
+        }
+        #Dmaket {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #Dmaket td, #Dmaket th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #Dmaket tr:nth-child(even){background-color: #f2f2f2;}
+        #Dmaket tr:hover {background-color: #ddd;}
+        #Dmaket th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #333333;
+            color: #9d9d9d;
+        }
         #Dmaket img {
             width: 120px;
             height: 80px;
         }
         .btn {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #333333;
+            color: #9d9d9d;
             padding: 16px 20px;
             border: none;
             cursor: pointer;
@@ -45,10 +46,32 @@
         .btn:hover {
             opacity: 1;
         }
+        h1 {
+            margin-top: 70px;
+            color: #9d9d9d;
+        }
     </style>
 </head>
 <body>
-    <h1>장바구니</h1>     
+    <!-- navbar -->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menu">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand">Dmaket</a>
+              </div>
+              <div class="collapse navbar-collapse" id="menu">
+                  <ul class="nav navbar-nav">
+                      <li><a href="index.php">HOME</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>    
+    <h1>장바구니</h1> 
 <?php
 #cart 테이블로부터 레코드 검색해서 나열하는 프로그램
 #1. 세션시작하고 이메일 가져오기

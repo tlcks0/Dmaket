@@ -19,7 +19,7 @@ $sql = "update user set pwd = '$pwd', name = '$name', email = '$email',
         where userid = '$userid'";
 #4. SQL 실행하기
 if($conn->query($sql)) {
-    echo "회원정보수정 성공!! <a href='index.php'>Dmaket</a>";
+    echo "<script>alert('회원정보수정 성공!!'); location.href='index.php'; </script>";
     $_SESSION['name'] = $name;    // 회원이름 변경된 것을 세션 데이터로 수정
 }
 else 

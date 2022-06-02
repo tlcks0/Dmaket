@@ -7,126 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     * {
-
-        box-sizing: border-box;
-
+      box-sizing: border-box;
     }
-
     body {
-
-        width: 600px;
-
-        margin-left: auto;
-
-        margin-right: auto;
-
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     input[type=text], select, textarea {
-
-        width: 100%;
-
-        padding: 12px;
-
-        border: 1px solid #ccc;
-
-        border-radius: 4px;
-
-        resize: vertical;
-
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
     }
-
- 
 
     label {
-
-        padding: 12px 12px 12px 0;
-
-        display: inline-block;
-
+      padding: 12px 12px 12px 0;
+      display: inline-block;
     }
-
  
-
     input[type=submit], button {
-
-        background-color: #4CAF50;
-
-        color: white;
-
-        padding: 12px 20px;
-
-        border: none;
-
-        border-radius: 4px;
-
-        cursor: pointer;
-
-        margin-top: 10px;
-        margin-left: 10px;
-
-        float: right;
-
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+      float: right;
     }
-
  
-
     input[type=submit]:hover, button:hover {
-
-        background-color: #45a049;
-
+      background-color: #45a049;
     }
-
  
-
     .container {
-
-        border-radius: 5px;
-
-        background-color: #f2f2f2;
-
-        padding: 20px;
-
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
     }
-
  
-
     .col-25 {
-
-        float: left;
-
-        width: 25%;
-
-        margin-top: 6px;
-
+      float: left;
+      width: 25%;
+      margin-top: 6px;
     }
-
- 
 
     .col-75 {
-
-        float: left;
-
-        width: 75%;
-
-        margin-top: 6px;
-
+      float: left;
+      width: 75%;
+      margin-top: 6px;
     }
-
  
-
     /* Clear floats after the columns */
-
     .row:after {
-
-        content: "";
-
-        display: table;
-
-        clear: both;
-
+      content: "";
+      display: table;
+      clear: both;
     }
 
+    h2 {
+      margin-top: 70px;
+    }
     </style>
 
     </head>
