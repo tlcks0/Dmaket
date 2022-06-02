@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="board.css">
     <style>
         body {
-            text-align: center;
-        }
-        #dmaket {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 70%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #dmaket td, #dmaket th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        #dmaket tr:nth-child(even){background-color: #f2f2f2;}
-        #dmaket tr:hover {background-color: #ddd;}
-        #dmaket th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: center;
-            background-color: #007bff;
-            color: white;
-        }
+                text-align: center;
+            }
+            #dmaket {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #dmaket td, #dmaket th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #dmaket tr:nth-child(even){background-color: #f2f2f2;}
+            #dmaket tr:hover {background-color: #ddd;}
+            #dmaket th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #333333;
+                color: #9d9d9d;
+            }
         #dmaket img {
             width: 120px;
             height: 80px;
@@ -103,7 +103,7 @@
             background: #ccc;
         }
         button {
-            background-color: #4CAF50;
+            background-color: #007bff;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -114,7 +114,7 @@
             margin-left: 5px;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #007bdd;
         }
         h2 {
         margin-top: 70px;

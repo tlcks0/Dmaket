@@ -45,6 +45,7 @@
         }
         .btn:hover {
             opacity: 1;
+            color: #fff;
         }
         h1 {
             margin-top: 70px;
