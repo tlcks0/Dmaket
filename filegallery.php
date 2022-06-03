@@ -3,6 +3,7 @@
 <head>
 	<title>File Gallery</title>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
 	<style>
 		.box {
 			display: inline-block;
