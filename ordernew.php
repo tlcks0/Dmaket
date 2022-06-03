@@ -19,7 +19,7 @@
     $name = $_SESSION['name'];
     # cart에 담긴 물품의 총액을 구하기
     include_once('dbconn.php');
-    $sql= "SELECT SUM(price) amount FROM cart WHERE userid = 'user1'";
+    $sql= "SELECT SUM(price) amount FROM cart WHERE userid = '$userid'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();  // $row['amount']
     ?>    

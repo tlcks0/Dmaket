@@ -275,7 +275,7 @@
 <div class="bg-1">
   <div class="container">
       <h3 class="text-center">쇼핑핫딜</h3>
-      <p class="text-center">베스트 상품</p>
+      <p class="text-center">베스트 판매량</p>
       <ul class="list-group">
           <li class="list-group-item">UV프로텍터 멀티디펜스
             <span class="label label-danger" style="margin-left: 10px">34,000원</span>

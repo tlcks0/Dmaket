@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>배송주문서 리스트</title>
+    <title>주문내역</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
@@ -72,7 +72,7 @@
               </div>
           </div>
       </nav>    
-    <h1>배송주문서 리스트</h1>     
+    <h1>주문내역</h1>     
 <?php
 #cart 테이블로부터 레코드 검색해서 나열하는 프로그램
 #1. 세션시작하고 이메일 가져오기
