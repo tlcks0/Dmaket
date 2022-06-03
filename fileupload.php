@@ -6,7 +6,7 @@ if(!isset($_FILES['imgfile']) || $_FILES['imgfile']['error'] != 0) {
 
 # 파일을 저장할 폴더 지정
 $target_dir = 'uploads/';  // 현재 폴더에 있는 하위 폴더 uploads
-$target_file = $target_dir . basename($_FILES['imgfile']['name']); 
+$target_file = $target_dir.basename($_FILES['imgfile']['name']); 
 
 # 파일 체크
 $upload_ok = 1;
@@ -19,7 +19,7 @@ if($_FILES['imgfile']['size'] > 500000000) {  // 파일크기가 500M 초과이�
 	$upload_ok = 0;
 }
 $imgtype = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); // 확장자 가져옴
-if($imgtype != 'jpg' && $imgtype != 'png' && $imgtype != 'jpeg') {
+if($imgtype != 'jpg' && $imgtype != 'jpeg' && $imgfile != 'png') {
 	echo "파일 종류는 jpg, jpeg, png 여야 합니다.";
 	$upload_ok = 0;	
 }
@@ -27,8 +27,9 @@ if($upload_ok == 0) {
 	echo "파일 업로드 오류";
 }
 else {
-	if(move_uploaded_file($_FILES['imgfile']['tmp_name'], $target_file)) 
+	if(move_uploaded_file($_FILES['imgfile']['tmp_name'], $target_file)) {
 		echo "파일 ".basename($_FILES['imgfile']['name']) . "을 업로드했습니다.";
+	}
 	else
 		echo "임시파일을 이동중에 오류가 발생했습니다";
 }

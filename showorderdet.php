@@ -25,7 +25,7 @@
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: center;
-            background-color: #4CAF50;
+            background-color: #333333;
             color: white;
         }
         #dmaket img {
@@ -33,7 +33,7 @@
             height: 80px;
         }
         .btn {
-            background-color: #4CAF50;
+            background-color: #333333;
             color: white;
             padding: 16px 20px;
             border: none;

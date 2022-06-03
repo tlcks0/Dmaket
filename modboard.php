@@ -124,14 +124,22 @@
                 <textarea rows="10" name="note" ><?=$note?></textarea>
               </div>
             </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">첨부파일</label>
+              </div>
+              <div class="col-75">
+                <input type="file" name="att">
+              </div>
+            </div>
             
             <div class="row">
-              <button type="button" onclick="location.href='showboard.php'">목록</button>
+              <button type="button" onclick="location.href='showboard.php'" style="background: #007bff">목록</button>
               <?php
                 if($userid == $_SESSION['userid']) {  // 작성자 = 로그인 사용자
               ?>
-              <button type="submit">수정</button>
-              <button type="button" onclick="location.href='removeboard.php?no=<?=$no?>'">삭제</button>
+              <button type="submit" style="background: #007bff">수정</button>
+              <button type="button" onclick="location.href='removeboard.php?no=<?=$no?>'" style="background: #007bff">삭제</button>
               <?php } ?> 
             </div>
           </form>

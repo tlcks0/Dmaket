@@ -28,7 +28,7 @@
                 padding-bottom: 12px;
                 text-align: center;
                 background-color: #333333;
-                color: #9d9d9d;
+                color: #fff;
             }
         #dmaket img {
             width: 120px;

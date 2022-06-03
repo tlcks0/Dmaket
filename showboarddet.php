@@ -138,16 +138,16 @@
             <label for="lname">첨부파일</label>
           </div>
           <div class="col-75">
-            <a href="uploads/<?=$att?>"><?=$att?></a>
+            <a href="filedownload.php?file=<?=$att?>"><?=$att?></a>
           </div>
         </div>
         <div class="row">
-          <button type="button" onclick="location.href='showboard.php'">리스트</button>
+          <button type="button" onclick="location.href='showboard.php'" style="background: #007bff">리스트</button>
           <?php
           if($userid == $_SESSION['userid']) { // 작성자 = 로그인 사용자
           ?>
-          <input type="submit" value="수정">
-          <button type="button" onclick="location.href='removeboard.php?no=<?=$no?>'">삭제</button>
+          <input type="submit" value="수정" style="background: #007bff">
+          <button type="button" onclick="location.href='removeboard.php?no=<?=$no?>'" style="background: #007bff">삭제</button>
           <?php } ?>
         </div>
       </form>

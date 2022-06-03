@@ -1,5 +1,10 @@
 <?php
 function uploadFile() {
+	# 파일 선택을 했는지 확인
+	if(!isset($_FILES['att']) || $_FILES['att']['error'] != 0) {
+		return null;
+	}
+
 	# 파일을 저장할 폴더 지정
 	$target_dir = 'uploads/';  // 현재 폴더에 있는 하위 폴더 uploads
 	$target_file = $target_dir . basename($_FILES['att']['name']); 
@@ -11,17 +16,17 @@ function uploadFile() {
 		$upload_ok = 0;
 	}
 	if($upload_ok == 0) {
-		echo "파일 업로드 오류";
-		return 'ERROR';
+		echo "파일 업로드를 종료합니다.";
+		return null;
 	}
 	else {
 		if(move_uploaded_file($_FILES['att']['tmp_name'], $target_file)) {
-			echo "파일 ".basename($_FILES['att']['name']) . "을 업로드했습니다.";
+			echo "파일 ".basename($_FILES['att']['name'])."을 업로드했습니다.";
 			return basename($_FILES['att']['name']);
 		}
 		else {
 			echo "임시파일을 이동중에 오류가 발생했습니다";
-			return 'ERROR';
+			return null;
 		}
 	}	
 }

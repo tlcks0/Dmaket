@@ -92,8 +92,8 @@
                 <input type="file" name="att">
               </div>
             </div>
-            <div class="row">
-              <input type="submit" value="작성">
+            <div class="row" id="btn">
+              <input type="submit" value="작성" style="background: #007bff">
             </div>
           </form>
         </div>

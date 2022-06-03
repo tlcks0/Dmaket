@@ -27,7 +27,7 @@
             padding-bottom: 12px;
             text-align: center;
             background-color: #333333;
-            color: #9d9d9d;
+            color: #fff;
         }
         #Dmaket img {
             width: 120px;
@@ -35,7 +35,7 @@
         }
         .btn {
             background-color: #333333;
-            color: #9d9d9d;
+            color: #fff;
             padding: 16px 20px;
             border: none;
             cursor: pointer;
@@ -49,7 +49,7 @@
         }
         h1 {
             margin-top: 70px;
-            color: #9d9d9d;
+            color: #000;
         }
     </style>
 </head>
