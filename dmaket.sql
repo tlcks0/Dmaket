@@ -28,7 +28,7 @@ CREATE TABLE `board` (
   `content` text NOT NULL,
   `attachment` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`no`)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `board` */
 
@@ -61,7 +61,8 @@ insert  into `board`(`no`,`userid`,`wdate`,`title`,`content`,`attachment`) value
 (64,'master','2022-06-03','회원탈퇴 후 재가입','회원탈퇴 후 재가입 가능.',''),
 (65,'master','2022-06-03','이용 불만사항 ','이용 불만사항 ',''),
 (66,'master','2022-06-03','내 정보 확인','내 정보 확인',''),
-(67,'master','2022-06-03','파일업로드','ㅇㅇㅇ','view1.JPG');
+(67,'master','2022-06-03','파일업로드','ㅇㅇㅇ','view1.JPG'),
+(68,'20192316','2022-06-05','물품 문의','문의합니다.','Dmaket.png');
 
 /*Table structure for table `cart` */
 
@@ -78,6 +79,8 @@ CREATE TABLE `cart` (
 /*Data for the table `cart` */
 
 insert  into `cart`(`userid`,`sellname`,`qty`,`price`) values 
+('20192316','UV프로텍터 멀티디펜스',1,34000),
+('20192316','메타그린 슬림업',1,61200),
 ('master','UV프로텍터 멀티디펜스',1,34000),
 ('master','메타그린 슬림업',2,122400),
 ('user1','네이처스웨이 비타구미 비타민D',2,69800),
@@ -103,7 +106,9 @@ insert  into `orditem`(`ordno`,`seq`,`sellname`,`qty`,`price`) values
 ('001',2,'칠성사이다 제로',2,45800),
 ('002',1,'칠성사이다 제로',3,68700),
 ('003',1,'UV프로텍터 멀티디펜스',1,34000),
-('003',2,'메타그린 슬림업',1,61200);
+('003',2,'메타그린 슬림업',1,61200),
+('006',1,'UV프로텍터 멀티디펜스',3,102000),
+('006',2,'메타그린 슬림업',1,61200);
 
 /*Table structure for table `porder` */
 
@@ -128,7 +133,8 @@ CREATE TABLE `porder` (
 insert  into `porder`(`ordno`,`userid`,`orddate`,`ADDRESS_ZIPCODE`,`ADDRESS_ROAD`,`ADDRESS_DETAIL`,`ADDRESS_SUBDETAIL`,`omunt`,`delant`,`total`) values 
 ('001','user1','2022-05-31',11159,'경기 포천시 호국로 1007','공과대학 4층','(선단동)',79800,3000,82800),
 ('002','master','2022-06-03',11159,'경기 포천시 호국로 1007','공과대학 4층',' (선단동)',68700,3000,71700),
-('003','master','2022-06-03',11159,'경기 포천시 호국로 1007','공과대학 4층',' (선단동)',95200,3000,98200);
+('003','master','2022-06-03',11159,'경기 포천시 호국로 1007','공과대학 4층',' (선단동)',95200,3000,98200),
+('006','20192316','2022-06-05',11159,'경기 포천시 호국로 1007','공과대학 4층',' (선단동)',163200,3000,166200);
 
 /*Table structure for table `selllist` */
 
@@ -172,6 +178,7 @@ CREATE TABLE `user` (
 /*Data for the table `user` */
 
 insert  into `user`(`userid`,`pwd`,`name`,`email`,`phone`,`ADDRESS_ZIPCODE`,`ADDRESS_ROAD`,`ADDRESS_DETAIL`,`ADDRESS_SUBDETAIL`) values 
+('20192316','000000','김시찬','20192316@daejin.ac.kr','10',11159,'경기 포천시 호국로 1007','공과대학 4층',' (선단동)'),
 ('master','000000','관리자','master@ccc.com','10',11159,'경기 포천시 호국로 1007','공과대학 4층',' (선단동)'),
 ('user1','123123','김유저','aaa@aaa.com','010-1111-1111',13117,'경기 성남시 수정구 복정로 76','1호관',' (복정동)'),
 ('user2','000000','김말똥','bbb@bbb.com','010-2222-3323',11340,'경기 동두천시 벌마들로40번길 30','2호관',' (상패동)'),

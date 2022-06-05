@@ -18,5 +18,5 @@ $sql = "insert into user values('$userid','$pwd','$name', '$email', $phone, '$AD
 #4. SQL 실행하기
 if($conn->query($sql)) 
     echo "<script>alert('회원가입 성공!!'); location.href='index.php'; </script>";
-else echo "회원가입 중에 오류가 발생했습니다.";
+else echo "<script>alert('회원가입 중에 오류가 발생했습니다.'); location.href='signup.html'</script>";
 ?>

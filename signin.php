@@ -31,5 +31,5 @@ if(isset($result) && $result->num_rows > 0) {
     echo "<script>location.href='index.php'</script>";
 }
 else
-    echo "아이디 또는 패스워드가 맞지 않습니다.";
+    echo "<script>alert('아이디 또는 패스워드가 맞지 않습니다.'); location.href='signin.html'</script>";
 ?>
