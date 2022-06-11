@@ -8,14 +8,14 @@
     <style>
     body, html {
         height: 100%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif; /* 폰트변경 */
     }
     * {
         box-sizing: border-box;
     }
     .bg-img {
         /* The image used */
-        background-image: url("images2/Dmaket.png");
+        background-image: url("img/Dmaket.png");
         min-height: 380px;
         /* Center and scale the image nicely */
         background-position: center;

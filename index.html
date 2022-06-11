@@ -6,102 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    .container {
-        padding: 80px 120px;
-    }
-    .dev {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 100%;
-    height: 100%;
-    }
-    .dev:hover {
-    border-color: #f1f1f1;
-    }
-      
-    .carousel-inner img {
-        /*filter: grayscale(90%);  make all photos black and white */ 
-        width: 100%; /* Set width to 100% */
-        margin: auto;
-    }
-
-    .carousel-caption h3 {
-        color: #fff !important;
-    }
-
-    @media (max-width: 600px) {
-        .carousel-caption {
-            display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-        }
-    }
-
-    .bg-1 {
-        background: #2d2d30;
-        color: #bdbdbd;
-    }
-    .bg-1 h3 {color: #fff;}
-    .bg-1 p {font-style: italic;}
-    .nav-tabs li a {
-        color: #777;
-    }
-
-    #home, #about, #shopping {
-      margin-top: 60px;
-    }
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-
-
-	/* 추가한것 */
-	.topnav {
-		background-color: transparent;
-		overflow: hidden;
-	}
-
-	/* Style the links inside the navigation bar */
-	.topnav a {
-		float: right;
-		color: #f2f2f2;
-		text-align: center;
-		padding: 8px;
-		text-decoration: none;
-		font-size: 14px;
-	}
-
-	/* Change the color of links on hover */
-	.topnav a:hover {
-		background-color: #ddd;
-		color: black;
-	}
-
-	/* Add a color to the active/current link */
-	.topnav a.active {
-		background-color: #4CAF50;
-		color: white;
-	}
-
-	/* Right-aligned section inside the top navigation */
-	.topnav-right {
-		float: right;
-	}    
-</style>
+  <script defer src="js/index.js"></script>
 </head>
 <body>
 
@@ -139,28 +47,28 @@
     <!-- slide -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="images2/1.jpg">
+            <img src="img/1.jpg">
             <div class="carousel-caption">
                 <h3>헤라 선크림</h3>
                 <p>다가오는 계절 텐션 맞춰 줄</p>
             </div>
         </div>
         <div class="item">
-            <img src="images2/2.jpg">
+            <img src="img/2.jpg">
             <div class="carousel-caption">
                 <h3>메타그린 슬림업</h3>
                 <p>10년간 100만 다이어터들이 인정한</p>
             </div>
         </div>
         <div class="item">
-            <img src="images2/3.jpg">
+            <img src="img/3.jpg">
             <div class="carousel-caption">
                 <h3>롯데칠성 제로탄산 BIG3</h3>
                 <p>칼로리 걱정없이 즐기는 탄산음료</p>
             </div>
         </div>
         <div class="item">
-            <img src="images2/4.jpg">
+            <img src="img/4.jpg">
             <div class="carousel-caption">
                 <h3>네이처스웨이</h3>
                 <p>세계적인 트렌드 맛있는 구미영양제</p>
@@ -188,7 +96,7 @@
         <div class="col-sm-4">
             <p><strong>국민 음료의 ORIGINALITY</strong></p>
             <a href="#one" data-toggle="collapse">
-                <img src="images2/칠성사이다.jpg">
+                <img src="img/칠성사이다.jpg">
             </a>
             <div id="one" class="collapse">
                 <a href=""><p>칠성사이다 제로</p></a>
@@ -197,7 +105,7 @@
         <div class="col-sm-4">
             <p><strong>요즘 대세 트렌드 아이템은 나야나</strong></p>
             <a href="#two"  data-toggle="collapse">
-                <img src="images2/펩시콜라.jpg">
+                <img src="img/펩시콜라.jpg">
             </a>
             <div id="two" class="collapse">
                 <a href=""><p>펩시콜라 제로</p></a>
@@ -206,7 +114,7 @@
         <div class="col-sm-4">
             <p><strong>과일향 탄산제로</strong></p>
             <a href="#third"  data-toggle="collapse">
-                <img src="images2/탐스제로.jpg">
+                <img src="img/탐스제로.jpg">
             </a>
             <div id="third" class="collapse">
                 <a href=""><p>탐스제로</p></a>
@@ -264,22 +172,22 @@
     <h3>SHOPPING</h3>
     <div class="row">
         <div class="col-sm-4">
-            <img src="images2/shopping1.jpg" class="img-responsive" style="width: 100%">
+            <img src="img/shopping1.jpg" class="img-responsive" style="width: 100%">
         </div>
         <div class="col-sm-4">
-            <img src="images2/shopping2.jpg" class="img-responsive" style="width: 100%">
+            <img src="img/shopping2.jpg" class="img-responsive" style="width: 100%">
         </div>
         <div class="col-sm-4">
-            <img src="images2/shopping3.jpg" class="img-responsive" style="width: 100%">
+            <img src="img/shopping3.jpg" class="img-responsive" style="width: 100%">
         </div>
         <div class="col-sm-4">
-            <img src="images2/shopping4.jpg" class="img-responsive" style="width: 100%">
+            <img src="img/shopping4.jpg" class="img-responsive" style="width: 100%">
         </div>
         <div class="col-sm-4">
-            <img src="images2/shopping5.jpg" class="img-responsive" style="width: 100%">
+            <img src="img/shopping5.jpg" class="img-responsive" style="width: 100%">
         </div>
         <div class="col-sm-4">
-            <img src="images2/shopping6.jpg" class="img-responsive" style="width: 100%">
+            <img src="img/shopping6.jpg" class="img-responsive" style="width: 100%">
         </div>
     </div>
 </div>
@@ -300,15 +208,15 @@
       <h5><span class="label label-danger">제로탄산</span> <span class="label label-primary">칠성사이다</span></h5><br>
       <div class="panel panel-default">
         <div class="panel-body">
-            <p><img src="images2/view1.JPG"></p>
+            <p><img src="img/view1.JPG"></p>
             <p>모두들 탄산음료 좋아하시죠??<br>요즘 다이어트 하시는분들 많을탠데요~ 저도 그중 한명이랍니다.. 탄산음료가 칼로리가 엄청 높다고 하자나요?? 
             근데 또 탄산음료 없이는 못사는 사람인지라.. 저칼로리 음료를 찾다보니 이게 모람?! 전부터 많이 먹던 칠성사이다에서 제로탄산 음료가 있더라구요??
             </p>
-            <p><img src="images2/view2.JPG"></p>
+            <p><img src="img/view2.JPG"></p>
             <p>바로 구매해버렸지 뭐에요~ <br>제가 산건 24캔짜리에요 생각보다 저렴하더라구요</p>
-            <p><img src="images2/view3.JPG"></p>
+            <p><img src="img/view3.JPG"></p>
             <p>0칼로리라서 대박 대박!! <br>아무래도 다이어터들은 열량을 많이 신경쓰잖아요. 근데 요건 1도 신경을 안써도 되겠어요!!</p>
-            <p><img src="images2/view4.JPG"></p>
+            <p><img src="img/view4.JPG"></p>
             <p>제로라고 해서 탄산이 덜 있거나 하지 않고 충분해요!<br>따를 때부터 쏴아아~~ 맥주처럼 거품이 넘치진 않지만 소화 안될 때 속이 제대로 뚫립니다.
             <br>다이어터들~ 칼로리 높은 일반 음료수 대신 당은 줄이면서 시원하게 마시고 싶다면,<br> 칼로리가 걱정된다면 주저하지말고 드세요!!</p>
         </div>
@@ -330,40 +238,6 @@
 	대진대학교 휴먼IT공과대학 컴퓨터공학전공
 	<p style="font-size:5px;">경기도 포천시 호국로 1007(선단동)</p>
 </footer>
-
-<script>
-$(document).ready(function(){
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});   
-
-  // Add smooth scrolling on all links inside the navbar
-  $("#myNavbar a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }  // End if
-  });
-});
-// 화면을 부드럽게 스크롤링하기
-function scrollToSection(loc) {
-    var offset = $(loc).offset();
-    $('html, body').animate({scrollTop: offset.top}, 500);
-}
-</script>
 
 </body>
 </html>

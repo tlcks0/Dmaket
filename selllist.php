@@ -32,7 +32,7 @@ if(!$result)
         <td><?=$row[0]?></td>
         <td><a href="addcart.php?selllist=<?=$row[1]?>&price=<?=$row[2]?>"><?=$row[1]?></a></td>
         <td><?=$row[2]?></td>
-        <td><img src="images2/<?=$row[3]?> "style="width: 100px; height: 100px"></td>
+        <td><img src="img/<?=$row[3]?> "style="width: 100px; height: 100px"></td>
     </tr>
     <?php } ?>
     </table>

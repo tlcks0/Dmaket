@@ -103,7 +103,7 @@ if($result->num_rows > 0) {
     <tr>
         <td><input type="checkbox" name="chk[]" value="<?=$row['sellname']?>"></td>
         <td><?=$no++?></td>
-        <td><img src="images2/<?=$row['photo']?>"></td>
+        <td><img src="img/<?=$row['photo']?>"></td>
         <td><?=$row['sellname']?></td>
         <td><?=$row['qty']?></td>
         <td><?=$row['price']?></td>

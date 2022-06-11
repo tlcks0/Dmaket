@@ -6,31 +6,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="css/board.css">
     <style>
         body {
-                text-align: center;
-            }
-            #dmaket {
-                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                border-collapse: collapse;
-                width: 70%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #dmaket td, #dmaket th {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-            #dmaket tr:nth-child(even){background-color: #f2f2f2;}
-            #dmaket tr:hover {background-color: #ddd;}
-            #dmaket th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: center;
-                background-color: #333333;
-                color: #fff;
-            }
+            text-align: center;
+        }
+        #dmaket {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #dmaket td, #dmaket th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #dmaket tr:nth-child(even){background-color: #f2f2f2;}
+        #dmaket tr:hover {background-color: #ddd;}
+        #dmaket th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #333333;
+            color: #fff;
+        }
         #dmaket img {
             width: 120px;
             height: 80px;
@@ -56,12 +56,6 @@
             margin-left: auto;
         }
         .paging_area a, .paging_area span {
-            /*
-            color: black;
-            display: inline-block;
-            padding: 8px 16px;
-            text-decoration: none;
-            transition: background-color .3s;*/
             display: inline-block;
             border-radius: 3px;
             border: solid 1px #c0c0c0;
@@ -138,7 +132,7 @@
             $keyword = '%'.$keyword.'%';    // 제목이 keyword 값이 들어있는 것 검색
         }
         else if(isset($_GET['keyword'])) $keyword = '%';
-        else $keyword = $_GET['keyword'];
+        else $keyword = '%';
 
         // 페이징을 위한 변수선언과 값 설정
         $list_size = 6; // 1 페이지의 레코드 개수

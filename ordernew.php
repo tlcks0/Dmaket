@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
+<head>
     <title>물품 배송 주문</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <link rel="shortcut icon" href="D.jpg" type="image/x-icon" />
-    <link href="bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="signup.js"></script>
-   
-    <!-- 폼 시작 -->
-    <body>
-
+    <script src="js/signup.js"></script>
+</head>
+<body>
     <?php
     session_start();
     $userid = $_SESSION['userid'];
